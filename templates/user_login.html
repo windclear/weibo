@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册与登陆</title>
+    <link rel="stylesheet" href="/static/css/wi.css">
+</head>
+<body>
+    <div class="wi-top">
+        <strong>微博</strong>
+    </div>
+    <div class="wi-body wi-flex">
+            <div class="wi-login">
+                <form action="{{ url_for('user.register') }}" method="post">
+                    <div>
+                        注册
+                    </div>
+                    <div class="wi-input-wrapper">
+                        <input type="text" placeholder="用户名" name="username" required>
+                    </div>
+                    <div class="wi-input-wrapper">
+                        <input type="text" placeholder="密码" name="password" required>
+                    </div>
+                    <button class="wi-button-big" type="submit">注册</button>
+                </form>
+            </div>
+
+
+        <div  class="wi-login">
+            <form action="{{ url_for('user.login') }}" method="post">
+                <div>
+                    登陆
+                </div>
+                <div class="wi-input-wrapper">
+                    <input type="text" placeholder="用户名" name="username" required>
+                </div>
+                <div class="wi-input-wrapper">
+                    <input type="text" placeholder="密码" name="password" required>
+                </div>
+                <button class="wi-button-big" type="submit">登陆</button>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>
